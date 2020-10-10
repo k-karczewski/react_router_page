@@ -1,8 +1,14 @@
 import React from 'react';
+import Product from '../components/Product';
+import {Link} from 'react-router-dom';
 
-const ProductsPage = () => {
+const ProductsPage = ({match}) => {
     return ( 
-        <div>strona produktów</div>
+        <>
+            <div>strona produktów</div>
+            <Product id={match.params.id}/>
+            <Link to="/products">Powrót do listy produktu</Link>
+        </>
      );
 }
  
